@@ -1,0 +1,22 @@
+
+<div class="container-xl" align="center">
+  <h2>Chỉnh sửa sách</h2>
+  <form [formGroup]="form" (ngSubmit)="onUpdate()">
+    <a [routerLink]="['/']" class="btn btn-outline-info mb-3">Quay lại</a>
+    <table>
+      <tr>
+        <td>Book's name: </td>
+        <td><input type="text" formControlName="title" id="title"></td>
+      </tr>
+      <tr>
+        <td>Author: </td>
+        <td><input type="text" formControlName="author" id="author"></td>
+      </tr>
+      <tr>
+        <td>Description: </td>
+        <td><textarea type="text" formControlName="description" id="description" cols="30" rows="10"></textarea></td>
+      </tr>
+    </table>
+    <button type="submit" class="btn btn-outline-danger">Cập nhật</button>
+  </form>
+</div>
